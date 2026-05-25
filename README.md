@@ -12,20 +12,20 @@ This project collects recent cybersecurity articles from Feedly, ranks the top i
 - Exploitation prerequisites.
 - A `.docx` newsletter and JSON report.
 
+## Deployment Package
+
+Download the EC2 deployment package from:
+
+- `dist/cti-newsletter-aws-ec2.zip`
+
+Unzip it on the EC2 instance, then follow `deploy/aws-ec2/README.md` inside the package.
+
 ## Local Quick Run
 
 ```powershell
 $env:FEEDLY_API_KEY="your_feedly_token"
 .\quick_jobs\run_last18h_cti_newsletter.ps1
 ```
-
-## AWS EC2 Deployment
-
-Use the deployment package instructions in:
-
-- `deploy/aws-ec2/README.md`
-
-The EC2 installer creates a Python virtual environment, installs dependencies, adds a runner script, and registers an optional systemd timer.
 
 ## Important
 
